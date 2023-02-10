@@ -1,0 +1,36 @@
+// *******************************************************************************************************
+// # mixin
+// *******************************************************************************************************
+
+// ## clearfix
+// --------------------------------------------------------
+// `@include %cfx;`
+
+@mixin cfx() {
+  & {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// ## mouseover animation opacity
+// --------------------------------------------------------
+// `@include %hover;`
+// `@include %hout;`
+@mixin hover($num: 0.85, $sec: 0.2s) {
+  opacity: $num;
+  transition: $sec ease-in-out;
+
+  filter: alpha(opacity=$num * 100);
+}
+@mixin hout($sec: 0.2s) {
+  transition: $sec ease-in-out;
+}

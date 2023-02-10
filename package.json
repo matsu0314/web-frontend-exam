@@ -1,0 +1,40 @@
+{
+  "name": "donuts-web-frontend-package",
+  "version": "1.0.0",
+  "description": "",
+  "author": "donuts-web-frontend",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "scripts": {
+    "css/sass": "node-sass --importer node_modules/node-sass-globbing/index.js _src/sass/scss/style.scss --output static/css --output-style expanded --omit-source-map-url",
+    "css/autoprefix": "postcss static/css/style.css -o static/css/style.css -c=.postcss.config.js --no-map",
+    "css": "npm-run-all -s css/*",
+    "js/browserify": "browserify _src/js/index.js -p esmify -t babelify --outfile _src/dist/js/index.js",
+    "js/uglifyjs": "uglifyjs _src/dist/js/index.js -o static/js/all.min.js",
+    "js": "npm-run-all -s js/*",
+    "watch/css": "watch 'yarn css' _src/sass",
+    "watch/js": "watch 'yarn js' _src/js",
+    "watch/server": "browser-sync start --proxy ${npm_package_config_local_origin} --no-ghost-mode --no-ui ./ -f 'src, **/*.html, static/**/*.css, static/**/*.js, !node_modules/**/*'",
+    "all": "npm-run-all -p watch/*"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "esmify": "^2.1.1",
+    "node-sass": "^8.0.0",
+    "node-sass-globbing": "^0.0.23",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0",
+    "uglify-es": "^3.3.9",
+    "watch": "^1.0.2"
+  },
+  "browserslist": [
+    "last 2 Chrome major versions",
+    "last 2 Firefox major versions",
+    "last 2 Edge major versions",
+    "Safari >= 10",
+    "iOS >= 10"
+  ]
+}

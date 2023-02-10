@@ -1,0 +1,36 @@
+//*******************************
+// breakpoint
+//*******************************
+$sp: "only screen and (max-width: 736px)";
+$pc: "only screen and (min-width: 737px)";
+
+//*******************************
+// contents width
+//*******************************
+$baseContentsWidth: 1112px;
+
+//*******************************
+// default color
+//*******************************
+$baseColor: #333;
+
+//*******************************
+// text color, link color
+//*******************************
+$baseTextColor: #333;
+$linkTextColor: #333;
+$baseHoverColor: #4a90e2;
+$baseActiveColor: #4a90e2;
+$baseVisitedColor: #333;
+
+//*******************************
+// font size
+//*******************************
+$baseFontSize: 14px;
+$baseLetterSpacing: 0;
+$baseLineHeight: 1.75;
+
+//*******************************
+// fontfamily
+//*******************************
+$baseFontFamily: "Noto Sans JP";

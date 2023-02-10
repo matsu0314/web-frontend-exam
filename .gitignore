@@ -1,0 +1,21 @@
+.DS_Store
+# npm
+/**/node_modules/
+package-lock.json
+yarn-error.log
+!/**/yarn.lock
+!/**/package.json
+/**/.npmrc
+/**/.env
+# _src
+/**/_src/dist/
+!/**/_src/dist/js/.gitkeep
+/**/_src/img/
+!/**/_src/img/.gitkeep
+# readme
+!README.md
+# Git
+!/.gitignore
+!/.gitmodules
+!/PULL_REQUEST_TEMPLATE.md
+

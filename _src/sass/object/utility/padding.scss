@@ -1,0 +1,103 @@
+// *******************************************************************************************************
+// # utility class
+// *******************************************************************************************************
+
+// /* --------------------------------------------------
+//	padding
+// -------------------------------------------------- */
+
+// padding top
+.u-pt0 { padding-top: 0 !important; }
+.u-pt5 { padding-top: 5px !important; }
+.u-pt10 { padding-top: 10px !important; }
+.u-pt15 { padding-top: 15px !important; }
+.u-pt20 { padding-top: 20px !important; }
+.u-pt30 { padding-top: 30px !important; }
+.u-pt40 { padding-top: 40px !important; }
+.u-pt50 { padding-top: 50px !important; }
+.u-pt60 { padding-top: 60px !important; }
+.u-pt70 { padding-top: 70px !important; }
+.u-pt80 { padding-top: 80px !important; }
+.u-pt90 { padding-top: 90px !important; }
+.u-pt100 { padding-top: 100px !important; }
+
+@media #{$pc} {
+  .u-pc-pt0 { padding-top: 0 !important; }
+  .u-pc-pt5 { padding-top: 5px !important; }
+  .u-pc-pt10 { padding-top: 10px !important; }
+  .u-pc-pt15 { padding-top: 15px !important; }
+  .u-pc-pt20 { padding-top: 20px !important; }
+  .u-pc-pt30 { padding-top: 30px !important; }
+  .u-pc-pt40 { padding-top: 40px !important; }
+  .u-pc-pt50 { padding-top: 50px !important; }
+  .u-pc-pt60 { padding-top: 60px !important; }
+  .u-pc-pt70 { padding-top: 70px !important; }
+  .u-pc-pt80 { padding-top: 80px !important; }
+  .u-pc-pt90 { padding-top: 90px !important; }
+  .u-pc-pt100 { padding-top: 100px !important; }
+}
+
+@media #{$sp} {
+  .u-sp-pt0 { padding-top: 0 !important; }
+  .u-sp-pt5 { padding-top: 5px !important; }
+  .u-sp-pt10 { padding-top: 10px !important; }
+  .u-sp-pt15 { padding-top: 15px !important; }
+  .u-sp-pt20 { padding-top: 20px !important; }
+  .u-sp-pt30 { padding-top: 30px !important; }
+  .u-sp-pt40 { padding-top: 40px !important; }
+  .u-sp-pt50 { padding-top: 50px !important; }
+  .u-sp-pt60 { padding-top: 60px !important; }
+  .u-sp-pt70 { padding-top: 70px !important; }
+  .u-sp-pt80 { padding-top: 80px !important; }
+  .u-sp-pt90 { padding-top: 90px !important; }
+  .u-sp-pt100 { padding-top: 100px !important; }
+}
+
+
+// padding bottom
+.u-pb0 { padding-bottom: 0 !important; }
+.u-pb5 { padding-bottom: 5px !important; }
+.u-pb10 { padding-bottom: 10px !important; }
+.u-pb15 { padding-bottom: 15px !important; }
+.u-pb20 { padding-bottom: 20px !important; }
+.u-pb30 { padding-bottom: 30px !important; }
+.u-pb40 { padding-bottom: 40px !important; }
+.u-pb50 { padding-bottom: 50px !important; }
+.u-pb60 { padding-bottom: 60px !important; }
+.u-pb70 { padding-bottom: 70px !important; }
+.u-pb80 { padding-bottom: 80px !important; }
+.u-pb90 { padding-bottom: 90px !important; }
+.u-pb100 { padding-bottom: 100px !important; }
+
+@media #{$pc} {
+  .u-pc-pb0 { padding-bottom: 0 !important; }
+  .u-pc-pb5 { padding-bottom: 5px !important; }
+  .u-pc-pb10 { padding-bottom: 10px !important; }
+  .u-pc-pb15 { padding-bottom: 15px !important; }
+  .u-pc-pb20 { padding-bottom: 20px !important; }
+  .u-pc-pb30 { padding-bottom: 30px !important; }
+  .u-pc-pb40 { padding-bottom: 40px !important; }
+  .u-pc-pb50 { padding-bottom: 50px !important; }
+  .u-pc-pb60 { padding-bottom: 60px !important; }
+  .u-pc-pb70 { padding-bottom: 70px !important; }
+  .u-pc-pb80 { padding-bottom: 80px !important; }
+  .u-pc-pb90 { padding-bottom: 90px !important; }
+  .u-pc-pb100 { padding-bottom: 100px !important; }
+}
+
+@media #{$sp} {
+  .u-sp-pb0 { padding-bottom: 0 !important; }
+  .u-sp-pb5 { padding-bottom: 5px !important; }
+  .u-sp-pb10 { padding-bottom: 10px !important; }
+  .u-sp-pb15 { padding-bottom: 15px !important; }
+  .u-sp-pb20 { padding-bottom: 20px !important; }
+  .u-sp-pb30 { padding-bottom: 30px !important; }
+  .u-sp-pb40 { padding-bottom: 40px !important; }
+  .u-sp-pb50 { padding-bottom: 50px !important; }
+  .u-sp-pb60 { padding-bottom: 60px !important; }
+  .u-sp-pb70 { padding-bottom: 70px !important; }
+  .u-sp-pb80 { padding-bottom: 80px !important; }
+  .u-sp-pb90 { padding-bottom: 90px !important; }
+  .u-sp-pb100 { padding-bottom: 100px !important; }
+}
+

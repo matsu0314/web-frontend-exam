@@ -1,0 +1,83 @@
+// *******************************************************************************************************
+// # base
+// *******************************************************************************************************/
+
+body {
+  overflow-x: scroll;
+  width: auto;
+  min-width: $baseContentsWidth;
+  background-color: #fff;
+  color: $baseTextColor;
+  font-family: $baseFontFamily;
+  letter-spacing: $baseLetterSpacing;
+  line-height: $baseLineHeight;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+@media #{$sp} {
+  body {
+    min-width: 100%;
+  }
+}
+
+
+html {
+  font-size: $baseFontSize;
+
+  -webkit-text-size-adjust: 100%;
+}
+
+@media #{$sp} {
+  html {
+    font-size: $baseFontSize;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+// *********************************************
+// # link style
+// *********************************************
+a {
+  color: $linkTextColor;
+  text-decoration: none;
+}
+
+a[href^="tel"] {
+  color: inherit;
+}
+
+@media #{$pc} {
+  a:hover {
+    color: $baseHoverColor;
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+  }
+}
+
+// *********************************************
+// # hover alpha
+// *********************************************
+.u-hover {
+  @include hout;
+
+  &:hover {
+    @include hover;
+  }
+}
+
+a img.u-hover {
+  @include hout;
+
+  &:hover {
+    @include hover;
+  }
+}
