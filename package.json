@@ -14,13 +14,14 @@
     "js": "npm-run-all -s js/*",
     "watch/css": "watch 'yarn css' _src/sass",
     "watch/js": "watch 'yarn js' _src/js",
-    "watch/server": "browser-sync start --proxy ${npm_package_config_local_origin} --no-ghost-mode --no-ui ./ -f 'src, **/*.html, static/**/*.css, static/**/*.js, !node_modules/**/*'",
+    "watch/server": "browser-sync start -s --no-ghost-mode --no-ui ./ -f 'src, *.html, static/**/*.css, static/**/*.js, !node_modules/**/*'",
     "all": "npm-run-all -p watch/*"
   },
   "devDependencies": {},
   "dependencies": {
     "autoprefixer": "^10.4.13",
     "babelify": "^10.0.0",
+    "browser-sync": "^2.27.11",
     "browserify": "^17.0.0",
     "esmify": "^2.1.1",
     "node-sass": "^8.0.0",
