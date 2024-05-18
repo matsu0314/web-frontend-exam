@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DONUTS Frontend 技能試験です。" />
+    <title>DONUTS FRONTEND EXAM</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="c-inner">
+        <h1 class="l-header__pageTitle">DONUTS FRONTEND EXAM</h1>
+      </div>
+    </header>
+    <main class="container">
+      <section class="exam-overview c-section">
+        <div class="c-inner">
+          <h2 class="c-title">試験概要</h2>
+          <p class="exam-overview__lead">
+            コーディング課題（試験内容）に取り組んでいただきたく、ご案内いたします。
+          </p>
+          <div class="exam-overview__section">
+            <h3 class="exam-overview__ttl">
+              ・フロントエンドエンジニア職に応募の方
+            </h3>
+            <ul class="exam-overview__list c-list c-list--dot">
+              <li>1 〜 4すべてご対応ください。</li>
+              <li>「4. 提出方法」に関して、githubでの提出を推奨します。</li>
+            </ul>
+          </div>
+          <div class="exam-overview__section">
+            <h3 class="exam-overview__ttl">・デザイナー職に応募の方</h3>
+            <ul class="exam-overview__list c-list c-list--dot">
+              <li>「3. APIによる反映」の対応は不要です。</li>
+              <li>
+                「4.提出方法」に関して、GitHubでの提出が難しい場合、圧縮ファイルでの提出でも可です。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="exam-cording c-section">
+        <div class="c-inner">
+          <h2 class="c-title">試験内容</h2>
+          <div class="exam-cording__section">
+            <h3 class="exam-cording__ttl">
+              1. デザインに従ってコーディングをしてください。
+            </h3>
+            <p>
+              <a
+                href="https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/"
+                target="_blank"
+                >https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/</a
+              >のデザインに沿って(問題文等も含めて)コーディングをしてください。なお、ベースとなるソースコードは<a
+                href="https://github.com/d-o-n-u-t-s/web-frontend-exam/"
+                target="_blank"
+                >https://github.com/d-o-n-u-t-s/web-frontend-exam/</a
+              >をCloneしてご使用ください。
+            </p>
+          </div>
+
+          <div class="exam-cording__section">
+            <h3 class="exam-cording__ttl">
+              2. レスポンシブにコーディングしてください。
+            </h3>
+            <p>
+              PC、モバイルそれぞれで何か1つのブラウザで確認できる状態にしてください。なお、提出時に確認済みブラウザを共有ください。
+            </p>
+          </div>
+
+          <div class="exam-cording__section">
+            <h3 class="exam-cording__ttl">
+              3. 以下のAPIを使って、天気情報を動的に取得し反映させてください。
+            </h3>
+            <ul class="c-list c-list--dot u-pb16">
+              <li>
+                Open-Meteo WeatherForecastAPI ...
+                <a href="https://open-meteo.com/en/docs/" target="_blank"
+                  >https://open-meteo.com/en/docs/</a
+                >
+              </li>
+              <li>
+                天気予報 API（livedoor 天気互換） ...
+                <a href="https://weather.tsukumijima.net/" target="_blank"
+                  >https://weather.tsukumijima.net/</a
+                >
+              </li>
+            </ul>
+
+            <ul class="c-list c-list--notes">
+              <li>
+                weatherCodeに対応する天候名とアイコンの取得はgetWeatherInfo.jsを使用してよいものとします。
+              </li>
+              <li>
+                どちらも観測地点は東京とし、(緯度, 経度) = (35.6785, 139.6823)
+                とします。
+              </li>
+              <li>
+                APIからの取得が難しい場合は、レイアウトのみ再現してください。
+              </li>
+            </ul>
+          </div>
+
+          <div class="exam-cording__section">
+            <h3 class="exam-cording__ttl">
+              4. 以下のいずれかの方法で提出をしてください。
+            </h3>
+            <ul class="c-list c-list--dot">
+              <li>
+                ご自身のGitHub上にリポジトリを作成し、そこにpushした上で、リポジトリURLを共有する。
+              </li>
+              <li>
+                clone先のディレクトリを.gitディレクトリを含んだ状態で圧縮(zip,tar等)し、添付して提出する。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="exam-weather c-section">
+        <div class="c-inner">
+          <h2 class="c-title">今日/明日の天気</h2>
+          <div class="exam-weather__content">
+            <div class="exam-weather__content__today c-weather-card c-weather-card--today">
+              <div class="c-weather-card__title">
+                <p>今日の天気</p>
+              </div>
+              <div class="c-weather-card__content">
+                <p class="c-weather-card__description">一部曇</p>
+                <div class="c-weather-card__icon">
+                  <img
+                    src="/static/img/100.svg"
+                    alt="一部曇"
+                    class="weather-icon"
+                  />
+                </div>
+                <div class="c-weather-card__temperature">
+                  <div class="c-weather-card__temperature__highest">
+                    <p>11.9<span>&deg;C</span></p>
+                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                  </div>
+                  <div class="c-weather-card__temperature__lowest">
+                    <p>1.1<span>&deg;C</span></p>
+                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                  </div>
+                </div>
+                <table class="c-weather-card__infoTable">
+                  <tr>
+                    <th>時間</th>
+                    <td>0-6時</td>
+                    <td>6-12時</td>
+                    <td>6-12時</td>
+                    <td>18-24時</td>
+                  </tr>
+                  <tr>
+                    <th>降水</th>
+                    <td>--%</td>
+                    <td>--%</td>
+                    <td>0%</td>
+                    <td>10%</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="exam-weather__content__tomorrow c-weather-card c-weather-card--tomorrow">
+              <div class="c-weather-card__title">
+                <p>明日の天気</p>
+              </div>
+              <div class="c-weather-card__content">
+                <p class="c-weather-card__description">一部曇</p>
+                <div class="c-weather-card__icon">
+                  <img
+                    src="/static/img/100.svg"
+                    alt="一部曇"
+                    class="weather-icon"
+                  />
+                </div>
+                <div class="c-weather-card__temperature">
+                  <div class="c-weather-card__temperature__highest">
+                    <p>11.9<span>&deg;C</span></p>
+                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                  </div>
+                  <div class="c-weather-card__temperature__lowest">
+                    <p>1.1<span>&deg;C</span></p>
+                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                  </div>
+                </div>
+                <table class="c-weather-card__infoTable">
+                  <tr>
+                    <th>時間</th>
+                    <td>0-6時</td>
+                    <td>6-12時</td>
+                    <td>6-12時</td>
+                    <td>18-24時</td>
+                  </tr>
+                  <tr>
+                    <th>降水</th>
+                    <td>--%</td>
+                    <td>--%</td>
+                    <td>0%</td>
+                    <td>10%</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="exam-weatherWeek c-section">
+        <div class="c-inner">
+          <h2 class="c-title">今週の天気</h2>
+          <div class="exam-weatherWeek__content">
+            <div class="exam-weatherWeek__content__item c-weather-card c-weather-card--week">
+              <div class="c-weather-card__title">
+                <p>2月8日 (水)</p>
+              </div>
+              <div class="c-weather-card__content">
+                <p class="c-weather-card__description">一部曇</p>
+                <div class="c-weather-card__icon">
+                  <img
+                    src="/static/img/100.svg"
+                    alt="一部曇"
+                    class="weather-icon"
+                  />
+                </div>
+                <div class="c-weather-card__temperature">
+                  <div class="c-weather-card__temperature__highest">
+                    <p>11.9<span>&deg;C</span></p>
+                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                  </div>
+                  <div class="c-weather-card__temperature__lowest">
+                    <p>1.1<span>&deg;C</span></p>
+                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="exam-weatherWeek__content__item c-weather-card c-weather-card--week">
+                <div class="c-weather-card__title">
+                  <p>2月8日 (水)</p>
+                </div>
+                <div class="c-weather-card__content">
+                  <p class="c-weather-card__description">一部曇</p>
+                  <div class="c-weather-card__icon">
+                    <img
+                      src="/static/img/100.svg"
+                      alt="一部曇"
+                      class="weather-icon"
+                    />
+                  </div>
+                  <div class="c-weather-card__temperature">
+                    <div class="c-weather-card__temperature__highest">
+                      <p>11.9<span>&deg;C</span></p>
+                      <p class="c-weather-card__temperature__diff">[-2]</p>
+                    </div>
+                    <div class="c-weather-card__temperature__lowest">
+                      <p>1.1<span>&deg;C</span></p>
+                      <p class="c-weather-card__temperature__diff">[-2]</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="exam-weatherWeek__content__item c-weather-card c-weather-card--week">
+                <div class="c-weather-card__title">
+                  <p>2月8日 (水)</p>
+                </div>
+                <div class="c-weather-card__content">
+                  <p class="c-weather-card__description">一部曇</p>
+                  <div class="c-weather-card__icon">
+                    <img
+                      src="/static/img/100.svg"
+                      alt="一部曇"
+                      class="weather-icon"
+                    />
+                  </div>
+                  <div class="c-weather-card__temperature">
+                    <div class="c-weather-card__temperature__highest">
+                      <p>11.9<span>&deg;C</span></p>
+                      <p class="c-weather-card__temperature__diff">[-2]</p>
+                    </div>
+                    <div class="c-weather-card__temperature__lowest">
+                      <p>1.1<span>&deg;C</span></p>
+                      <p class="c-weather-card__temperature__diff">[-2]</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- 同じ構造を繰り返す部分 -->
+            <!-- ここに追加の日付と天気情報を追加する -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="l-footer">
+      <div class="c-inner">
+        <p class="l-footer__copyright">&copy; DONUTS Co. Ltd.</p>
+      </div>
+    </footer>
+
+    <script src="/static/js/all.min.js"></script>
+  </body>
+</html>
