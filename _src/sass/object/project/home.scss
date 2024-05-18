@@ -1,0 +1,60 @@
+.exam-overview {
+    background-color: $baseSectionBgColor;
+    &__lead {
+        margin-bottom: 16px;
+    }
+    &__ttl {
+        color: #424242;
+        font-weight: 900;
+    }
+    &__section:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    &__list li {
+        text-indent: 1em;
+    }
+}
+
+.exam-cording {
+    &__ttl {
+        font-size: 20px;
+        color: #4A90E2;
+        font-weight: 900;
+    }
+    &__section:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.exam-weather {
+    background-color: $baseSectionBgColor;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 16px;
+        @media #{$sp} {
+            flex-direction: column;
+            gap: 16px 0;
+        }
+    }
+    &__content__today {
+        flex: 0 1 57.40%;
+    }
+    &__content__tomorrow {
+        flex: 0 1 51.10%;
+    }
+}
+
+.exam-weatherWeek {
+    &__content {
+        display: flex;
+        gap: 0 16px;
+        @media #{$sp} {
+            flex-direction: column;
+            gap: 16px 0;
+        }
+    }
+    &__content__item {
+        flex: 0 1 20%;
+    }
+}
