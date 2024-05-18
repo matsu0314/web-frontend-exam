@@ -1,0 +1,14 @@
+.l-header {
+    background:$titleBaseGradation;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    &__pageTitle {
+        font-size: 36px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 1.8px;
+        @media #{$sp} {
+            font-size: 30px;
+        }
+    }
+}
