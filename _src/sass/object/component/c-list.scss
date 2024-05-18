@@ -1,0 +1,19 @@
+.c-list {
+    li::before {
+        content: "";
+        display: inline;
+    }
+}
+.c-list.c-list--dot {
+    li::before {
+        content: "・";
+    }
+}
+.c-list.c-list--notes {
+    font-size: 12px;
+    color: $baseTextColor;
+    li::before {
+    padding-right: 0.2em;
+    content: "※";
+    }
+}
