@@ -7,26 +7,29 @@ $pc: "only screen and (min-width: 737px)";
 //*******************************
 // contents width
 //*******************************
-$baseContentsWidth: 1112px;
+$baseContentsWidth: 1080px;
 
 //*******************************
 // default color
 //*******************************
-$baseColor: #333;
+$baseColor: #424242;
 
 //*******************************
 // text color, link color
 //*******************************
-$baseTextColor: #333;
-$linkTextColor: #333;
+$baseTextColor: #424242;
+$linkTextColor: #424242;
 $baseHoverColor: #4a90e2;
 $baseActiveColor: #4a90e2;
-$baseVisitedColor: #333;
+$baseVisitedColor: #424242;
+$baseSectionBgColor: #F7F9FB;
+$WeatherTitleColor: #4a90e2;
+
 
 //*******************************
 // font size
 //*******************************
-$baseFontSize: 14px;
+$baseFontSize: 16px;
 $baseLetterSpacing: 0;
 $baseLineHeight: 1.75;
 
@@ -34,3 +37,17 @@ $baseLineHeight: 1.75;
 // fontfamily
 //*******************************
 $baseFontFamily: "Noto Sans JP";
+
+//*******************************
+// gradation
+//*******************************
+$titleBaseGradation: transparent linear-gradient(75deg, #15D6E6 0%, #05A9F4 0%, #005BBE 100%);
+
+//*******************************
+// space
+//*******************************
+$sideSpace:16px;
+$verticalSpace:80px;
+
+
+
