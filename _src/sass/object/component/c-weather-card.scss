@@ -30,16 +30,13 @@
     &__temperature__highest {
         color: #FF0000;
         padding: 0 8px;
-        span {
-            font-size: 16px;
-        }
     }
     &__temperature__lowest {
         color: #4A90E2;
         padding: 0 8px;
-        span {
-            font-size: 16px;
-        }
+    }
+    &__temperature__symbol {
+        font-size: 16px;
     }
     &__temperature__diff {
         font-size: 16px;

@@ -123,27 +123,42 @@
         <div class="c-inner">
           <h2 class="c-title">今日/明日の天気</h2>
           <div class="exam-weather__content">
-            <div class="exam-weather__content__today c-weather-card c-weather-card--today">
+            <div
+              id="today-weather"
+              class="exam-weather__content__today c-weather-card c-weather-card--today"
+            >
               <div class="c-weather-card__title">
                 <p>今日の天気</p>
               </div>
               <div class="c-weather-card__content">
-                <p class="c-weather-card__description">一部曇</p>
-                <div class="c-weather-card__icon">
-                  <img
-                    src="/static/img/100.svg"
-                    alt="一部曇"
-                    class="weather-icon"
-                  />
-                </div>
+                <p class="js-weather-label c-weather-card__description">-</p>
+                <div class="js-weather-icon c-weather-card__icon"></div>
                 <div class="c-weather-card__temperature">
                   <div class="c-weather-card__temperature__highest">
-                    <p>11.9<span>&deg;C</span></p>
-                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                    <p>
+                      <span class="js-temp-highest">-</span
+                      ><span class="c-weather-card__temperature__symbol"
+                        >&deg;C</span
+                      >
+                    </p>
+                    <p
+                      class="js-temp-diff-highest c-weather-card__temperature__diff"
+                    >
+                      [-]
+                    </p>
                   </div>
                   <div class="c-weather-card__temperature__lowest">
-                    <p>1.1<span>&deg;C</span></p>
-                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                    <p>
+                      <span class="js-temp-lowest">-</span
+                      ><span class="c-weather-card__temperature__symbol"
+                        >&deg;C</span
+                      >
+                    </p>
+                    <p
+                      class="js-temp-diff-lowest c-weather-card__temperature__diff"
+                    >
+                      [-]
+                    </p>
                   </div>
                 </div>
                 <table class="c-weather-card__infoTable">
@@ -151,40 +166,49 @@
                     <th>時間</th>
                     <td>0-6時</td>
                     <td>6-12時</td>
-                    <td>6-12時</td>
+                    <td>12-18時</td>
                     <td>18-24時</td>
                   </tr>
-                  <tr>
-                    <th>降水</th>
-                    <td>--%</td>
-                    <td>--%</td>
-                    <td>0%</td>
-                    <td>10%</td>
-                  </tr>
+                  <tr class="js-chanceOfRain"></tr>
                 </table>
               </div>
             </div>
-            <div class="exam-weather__content__tomorrow c-weather-card c-weather-card--tomorrow">
+            <div
+              id="tomorrow-weather"
+              class="exam-weather__content__tomorrow c-weather-card c-weather-card--tomorrow"
+            >
               <div class="c-weather-card__title">
                 <p>明日の天気</p>
               </div>
               <div class="c-weather-card__content">
-                <p class="c-weather-card__description">一部曇</p>
-                <div class="c-weather-card__icon">
-                  <img
-                    src="/static/img/100.svg"
-                    alt="一部曇"
-                    class="weather-icon"
-                  />
-                </div>
+                <p class="js-weather-label c-weather-card__description">-</p>
+                <div class="js-weather-icon c-weather-card__icon"></div>
                 <div class="c-weather-card__temperature">
                   <div class="c-weather-card__temperature__highest">
-                    <p>11.9<span>&deg;C</span></p>
-                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                    <p>
+                      <span class="js-temp-highest">-</span
+                      ><span class="c-weather-card__temperature__symbol"
+                        >&deg;C</span
+                      >
+                    </p>
+                    <p
+                      class="js-temp-diff-highest c-weather-card__temperature__diff"
+                    >
+                      [-]
+                    </p>
                   </div>
                   <div class="c-weather-card__temperature__lowest">
-                    <p>1.1<span>&deg;C</span></p>
-                    <p class="c-weather-card__temperature__diff">[-2]</p>
+                    <p>
+                      <span class="js-temp-lowest">-</span
+                      ><span class="c-weather-card__temperature__symbol"
+                        >&deg;C</span
+                      >
+                    </p>
+                    <p
+                      class="js-temp-diff-lowest c-weather-card__temperature__diff"
+                    >
+                      [-]
+                    </p>
                   </div>
                 </div>
                 <table class="c-weather-card__infoTable">
@@ -192,16 +216,10 @@
                     <th>時間</th>
                     <td>0-6時</td>
                     <td>6-12時</td>
-                    <td>6-12時</td>
+                    <td>12-18時</td>
                     <td>18-24時</td>
                   </tr>
-                  <tr>
-                    <th>降水</th>
-                    <td>--%</td>
-                    <td>--%</td>
-                    <td>0%</td>
-                    <td>10%</td>
-                  </tr>
+                  <tr class="js-chanceOfRain"></tr>
                 </table>
               </div>
             </div>
@@ -212,85 +230,7 @@
       <section class="exam-weatherWeek c-section">
         <div class="c-inner">
           <h2 class="c-title">今週の天気</h2>
-          <div class="exam-weatherWeek__content">
-            <div class="exam-weatherWeek__content__item c-weather-card c-weather-card--week">
-              <div class="c-weather-card__title">
-                <p>2月8日 (水)</p>
-              </div>
-              <div class="c-weather-card__content">
-                <p class="c-weather-card__description">一部曇</p>
-                <div class="c-weather-card__icon">
-                  <img
-                    src="/static/img/100.svg"
-                    alt="一部曇"
-                    class="weather-icon"
-                  />
-                </div>
-                <div class="c-weather-card__temperature">
-                  <div class="c-weather-card__temperature__highest">
-                    <p>11.9<span>&deg;C</span></p>
-                    <p class="c-weather-card__temperature__diff">[-2]</p>
-                  </div>
-                  <div class="c-weather-card__temperature__lowest">
-                    <p>1.1<span>&deg;C</span></p>
-                    <p class="c-weather-card__temperature__diff">[-2]</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="exam-weatherWeek__content__item c-weather-card c-weather-card--week">
-                <div class="c-weather-card__title">
-                  <p>2月8日 (水)</p>
-                </div>
-                <div class="c-weather-card__content">
-                  <p class="c-weather-card__description">一部曇</p>
-                  <div class="c-weather-card__icon">
-                    <img
-                      src="/static/img/100.svg"
-                      alt="一部曇"
-                      class="weather-icon"
-                    />
-                  </div>
-                  <div class="c-weather-card__temperature">
-                    <div class="c-weather-card__temperature__highest">
-                      <p>11.9<span>&deg;C</span></p>
-                      <p class="c-weather-card__temperature__diff">[-2]</p>
-                    </div>
-                    <div class="c-weather-card__temperature__lowest">
-                      <p>1.1<span>&deg;C</span></p>
-                      <p class="c-weather-card__temperature__diff">[-2]</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="exam-weatherWeek__content__item c-weather-card c-weather-card--week">
-                <div class="c-weather-card__title">
-                  <p>2月8日 (水)</p>
-                </div>
-                <div class="c-weather-card__content">
-                  <p class="c-weather-card__description">一部曇</p>
-                  <div class="c-weather-card__icon">
-                    <img
-                      src="/static/img/100.svg"
-                      alt="一部曇"
-                      class="weather-icon"
-                    />
-                  </div>
-                  <div class="c-weather-card__temperature">
-                    <div class="c-weather-card__temperature__highest">
-                      <p>11.9<span>&deg;C</span></p>
-                      <p class="c-weather-card__temperature__diff">[-2]</p>
-                    </div>
-                    <div class="c-weather-card__temperature__lowest">
-                      <p>1.1<span>&deg;C</span></p>
-                      <p class="c-weather-card__temperature__diff">[-2]</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <!-- 同じ構造を繰り返す部分 -->
-            <!-- ここに追加の日付と天気情報を追加する -->
-          </div>
+          <div id="week-weather" class="exam-weatherWeek__content"></div>
         </div>
       </section>
     </main>
@@ -299,6 +239,40 @@
         <p class="l-footer__copyright">&copy; DONUTS Co. Ltd.</p>
       </div>
     </footer>
+
+    <!--▼▼▼ 今週の天気テンプレート ここから ▼▼▼-->
+    <template id="weekWeather-template">
+      <div class="exam-weatherWeek__item c-weather-card c-weather-card--week">
+        <div class="js-weather-date c-weather-card__title">
+          <p>-月-日 (-)</p>
+        </div>
+        <div class="c-weather-card__content">
+          <p class="js-weather-label c-weather-card__description">-</p>
+          <div class="js-weather-icon c-weather-card__icon"></div>
+          <div class="c-weather-card__temperature">
+            <div class="c-weather-card__temperature__highest">
+              <p>
+                <span class="js-temp-highest">-</span
+                ><span class="c-weather-card__temperature__symbol">&deg;C</span>
+              </p>
+              <p class="js-temp-diff-highest c-weather-card__temperature__diff">
+                [-]
+              </p>
+            </div>
+            <div class="c-weather-card__temperature__lowest">
+              <p>
+                <span class="js-temp-lowest">-</span
+                ><span class="c-weather-card__temperature__symbol">&deg;C</span>
+              </p>
+              <p class="js-temp-diff-lowest c-weather-card__temperature__diff">
+                [-]
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+    <!--▲▲▲ 今週の天気テンプレート ここまで ▲▲▲-->
 
     <script src="/static/js/all.min.js"></script>
   </body>
