@@ -23,8 +23,8 @@ export class GetWeather {
     this.APIdata = APIdata;
 
     this.DOM.weatherLabel.textContent = this.APIdata.weatherLabel;
-    this.DOM.tempHighest.textContent = this.APIdata.maxTemp;
-    this.DOM.tempLowest.textContent = this.APIdata.minTemp;
+    this.DOM.tempHighest.textContent = this.APIdata.maxTemp || "-";
+    this.DOM.tempLowest.textContent = this.APIdata.minTemp || "-";
 
     this._createWeatherIconTag(
       this.DOM.weatherIcon,
