@@ -9,9 +9,11 @@
 @import "../foundation/reset.scss";
 @import "../foundation/base.scss";
 @import "../foundation/fonts.scss";
+@import "../foundation/animations.scss";
+
 
 // layout
-// @import "../layout/*.scss";
+@import "../layout/*.scss";
 
 // objects
 @import "../object/component/*.scss";

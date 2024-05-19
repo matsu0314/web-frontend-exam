@@ -15,11 +15,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@media #{$tablet} {
+  body {
+    min-width: 100%;
+  }
+}
 @media #{$sp} {
   body {
     min-width: 100%;
   }
 }
+
 
 
 html {

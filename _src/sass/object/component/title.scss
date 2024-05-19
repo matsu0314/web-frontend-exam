@@ -1,0 +1,25 @@
+.c-title {
+    position: relative;
+    font-weight: 900;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    padding-bottom: calc(18px + 8px);
+    margin-bottom: 32px;
+    @media #{$sp} {
+        font-size: 28px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display:inline-block;
+        margin: auto;
+        border-radius: 30px;
+        width: 80px;
+        height: 8px;
+        background: $titleBaseGradation;
+    }
+}
