@@ -85,13 +85,13 @@ export function displayTodayTomorrow(API_Data) {
   // TODO: 天気予報 APIでは前日のデータが取得できない様です。
   // 必要でしたらAPIの元になっている気象庁のJSONから取得します。
   const yesterdayData = {
-    date: "-",
-    weatherLabel: "-",
-    iconLabel: "-",
-    iconURL: "-",
-    maxTemp: "-",
-    minTemp: "-",
-    chanceOfRain: "-",
+    date: null,
+    weatherLabel: null,
+    iconLabel: null,
+    iconURL: null,
+    maxTemp: null,
+    minTemp: null,
+    chanceOfRain: null,
   };
 
   // 今日の天気
