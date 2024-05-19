@@ -1,0 +1,19 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    &::after {
+        content: "";
+        background: url("../img/img_loader.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+    body {
+        display: none;
+    
+    }
+}

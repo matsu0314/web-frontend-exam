@@ -5,6 +5,8 @@ import {
 import { fetchWeatherLive, fetchWeatherWMO } from "./hooks/fetchWeatherDate";
 
 (async () => {
+  let isLoading = true;
+
   // 週間データ取得
   const params = {
     latitude: 35.6785,
@@ -24,5 +26,13 @@ import { fetchWeatherLive, fetchWeatherWMO } from "./hooks/fetchWeatherDate";
     await displayTodayTomorrow(API_Data);
   } catch (error) {
     console.error("Error fetching weather data:", error);
+  }
+  isLoading = false;
+
+  if(!isLoading) {
+    const htmlElement = document.querySelector('html');
+    htmlElement.classList.add("fadeIn");
+    htmlElement.classList.remove("loading");
+
   }
 })();
