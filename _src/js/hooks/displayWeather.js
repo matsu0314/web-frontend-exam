@@ -21,7 +21,7 @@ export function displayWeekWeather(weatherData) {
   const weekWeather = document.querySelector("#week-weather");
   const weekWeatherTemplate = document.querySelector("#weekWeather-template");
 
-  // 火曜日からデータ取得
+  // 水曜日からデータ取得
   for (let i = 2; i < weatherData.daily.time.length; i++) {
     const weatherCode = weatherData.daily.weatherCode[i];
     const weatherInfo = getWeatherInfo(weatherCode);
