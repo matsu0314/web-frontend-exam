@@ -29,6 +29,7 @@ export function displayWeekWeather(weatherData) {
       "M月D日 (ddd)"
     );
 
+    // 各日の気温の配列
     const temperature2mMaxAry = weatherData.daily.temperature2mMax;
     const temperature2mMinAry = weatherData.daily.temperature2mMin;
 
@@ -73,17 +74,15 @@ export function displayWeekWeather(weatherData) {
  * @param {string} API_Data.forecasts[].image.title - 天気画像のタイトル
  * @param {string} API_Data.forecasts[].image.url - 天気画像のURL
  * @param {Object} API_Data.forecasts[].temperature - 気温情報
- * @param {Object} API_Data.forecasts[].temperature.max - 最高気温
- * @param {string} API_Data.forecasts[].temperature.max.celsius - 最高気温（摂氏）
- * @param {Object} API_Data.forecasts[].temperature.min - 最低気温
- * @param {string} API_Data.forecasts[].temperature.min.celsius - 最低気温（摂氏）
+ * @param {string} API_Data.forecasts[].temperature.max.celsius - 最高気温
+ * @param {string} API_Data.forecasts[].temperature.min.celsius - 最低気温
  * @param {Object} API_Data.forecasts[].chanceOfRain - 降水確率
  */
 export function displayTodayTomorrow(API_Data) {
   const todayWeather = document.getElementById("today-weather");
   const tomorrowWeather = document.getElementById("tomorrow-weather");
 
-  // TODO: 天気予報 APIでは昨日のデータが取得できない様です。
+  // TODO: 天気予報 APIでは前日のデータが取得できない様です。
   // 必要でしたらAPIの元になっている気象庁のJSONから取得します。
   const yesterdayData = {
     date: "-",
@@ -95,6 +94,7 @@ export function displayTodayTomorrow(API_Data) {
     chanceOfRain: "-",
   };
 
+  // 今日の天気
   const todayData = {
     date: API_Data["forecasts"][0]["date"],
     weatherLabel: API_Data["forecasts"][0]["telop"],
@@ -104,7 +104,7 @@ export function displayTodayTomorrow(API_Data) {
     minTemp: API_Data["forecasts"][0]["temperature"]["min"]["celsius"],
     chanceOfRain: API_Data["forecasts"][0]["chanceOfRain"],
   };
-
+  // 明日の天気
   const tomorrowData = {
     date: API_Data["forecasts"][1]["date"],
     weatherLabel: API_Data["forecasts"][1]["telop"],
